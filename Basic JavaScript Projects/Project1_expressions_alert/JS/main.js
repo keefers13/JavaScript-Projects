@@ -8,6 +8,6 @@ var Keith = "Me", Dad = "Rob", Mom = "Carrie" //assigning multiple variables
 document.write(Keith); //writing var
 document.write(Mom); //writing var
 document.write(3 + 3); //displaying sum of 3 + 3
-document.write(Keith.fontcolor( "blue" ));
+document.write(Keith.fontcolor( "blue" )); //changing color of var Keith to blue
 document.write("<br>"
 + Keith);
