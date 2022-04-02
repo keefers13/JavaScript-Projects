@@ -165,7 +165,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //this variable creates a loop.
         const animationLoop = requestAnimationFrame(animateLineDrawing);
         //this method clears content from the last loop interation.
-        c.clearRect(o, 0, 608, 608)
+        c.clearRect(0, 0, 608, 608)
         //this method starts a new path
         c.beginPath();
         //this method moves us to a starting point for our line.
@@ -179,7 +179,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //this method draws everything we laid out above
         c.stroke();
         //this condition checks id we've reached the endpoint.
-        if (xl <= x2 && y1 <= y2) {
+        if (x1 <= x2 && y1 <= y2) {
             //this condition adds 10 to the previous end x point.
             if (x < x2) {x += 10; }
             //this condition adds 10 to the previous end y point.
@@ -190,7 +190,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         }
         //this condition is similar to the one above.
         //this is necessary for the 6, 4, 2 win condition
-        if (xl <= x2 && y1 >= y2) {            
+        if (xl\1 <= x2 && y1 >= y2) {            
             if (x < x2) {x += 10; }
             if (y > y2) { y -= 10; }
             if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
