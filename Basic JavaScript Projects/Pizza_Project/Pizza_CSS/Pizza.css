@@ -30,7 +30,7 @@ h3 {
 #totalPrice {
     width: 200px;
     height: 190px;
-    margin: 200 auto;
+    margin: 20px auto;
     float: right;
 }
 
@@ -57,11 +57,11 @@ h3 {
     height: 190px;
     margin: 0px auto;
     float: left;
+    padding-bottom: 1rem;
 }
 
 #cart {
-    top: 0;
-    margin: 0px auto;
+    top: 0;margin: 0px auto;
     width: 400px;
     height: 200px;
 }
