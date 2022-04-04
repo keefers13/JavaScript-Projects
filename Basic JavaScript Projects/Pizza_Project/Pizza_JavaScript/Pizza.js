@@ -10,7 +10,7 @@ function getReceipt() {
             var selectedSize = sizeArray[i].value;
             text1 = text1+selectedSize+"<br>";
         }
-    }
+    } // tese else if statements determine the price of each size.
     if (selectedSize === "Personal Pizza") {
         sizeTotal = 6;
     } else if (selectedSize === "Small Pizza") {
@@ -30,7 +30,7 @@ function getReceipt() {
     getTopping(runningTotal,text1);
 };
 
-function getTopping(runningTotal, text1) {
+function getTopping(runningTotal, text1) { //this takes the info from the size price and adds the toppings.
     var toppingTotal = 0;
     var selctedTopping = [];
     var toppingArray = document.getElementsByClassName("toppings");
@@ -41,14 +41,14 @@ function getTopping(runningTotal, text1) {
             text1 = text1+toppingArray[j].value+"<br>";
         }
     }
-    var toppingCount = selctedTopping.length;
-    if (toppingCount > 1) {
+    var toppingCount = selctedTopping.length; 
+    if (toppingCount > 1) { // this gives one free topping, subtracting 1 from any number above one.
         toppingTotal = (toppingCount - 1);
-    } else {
+    } else { //if the topping total is <= 1, then it/s 0
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingTotal);
-    console.log("total selected topping items: "+toppingCount);
+    runningTotal = (runningTotal + toppingTotal); //this adds the topping number to the size of the pizza.
+    console.log("total selected topping items: "+toppingCount); //the below code writes out the receipt 
     console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
     console.log("topping text1: "+text1);
     console.log("Purchase Total: "+"$"+runningTotal+".00");
